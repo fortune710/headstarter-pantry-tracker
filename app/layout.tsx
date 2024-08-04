@@ -19,12 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Suspense>
-        <QueryParamProvider>
-          <body className={inter.className}>{children}</body>
-          <Toaster/>
-        </QueryParamProvider>
-      </Suspense>
+      <QueryParamProvider>
+        <body className={inter.className}>{children}</body>
+        <Toaster/>
+      </QueryParamProvider>
     </html>
   );
 }
